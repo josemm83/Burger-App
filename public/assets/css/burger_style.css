@@ -1,0 +1,24 @@
+.add {
+  text-align: center;
+  color: white;
+}
+
+.jumbotron {
+  text-align: center;
+  background-image: url("../img/table.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: bold;
+}
+
+body {
+  background-image: url("../img/burger_back.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn:hover {
+  background-color: teal;
+}

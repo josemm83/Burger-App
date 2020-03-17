@@ -1,4 +1,4 @@
-var connection = require("./connection");
+var connection = require("./connection.js");
 
 function printQuestionMarks(num) {
     var arr = [];
@@ -54,7 +54,6 @@ var orm ={
           cb(result);
         });
     },
-      // An example of objColVals would be {name: panther, sleepy: true}
     updateOne: function(table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
     
@@ -73,5 +72,5 @@ var orm ={
         });
     }
 };
-
+// console.log("orm connected");
 module.exports = orm;

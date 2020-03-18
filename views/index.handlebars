@@ -9,8 +9,8 @@
       <h2>Burgers ready to be devoured!</h2>
       <ul>
         {{#each burgers}}
-          {{#unless devoured}}
-            <form action="api/burger/{{id}}" method="POST">
+          {{#unless this.devoured}}
+            <form action="burgers/{{id}}">
               <div class="input-group">
                 <li class="form-control">{{id}}. {{burger_name}}</li>
                   <span class="input-group-btn">
@@ -23,17 +23,20 @@
       </ul>
     </div>
 
-    <div class="col-md-4 col-md-offset-1">
-      <h2>Burgers that have been devoured!</h2>
+    {{!-- <div class="col-md-4 col-md-offset-1">
+      <h2>Burgers that have been eaten!</h2>
       <ul>
-        {{#each burgers}}
+      {{#each burgers}}
           {{#if this.devoured}}
-            <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
+            <form action="burgers/{{id}}">
+              <div class="input-group">
+                <li class="form-control">{{id}}. {{burger_name}}</li>
+              </div>
+            </form>
           {{/if}}
         {{/each}}
       </ul>
-    </div>
-  </div>
+    </div> --}}
 
   <div class="col-md-10 col-md-offset-1 add">
     <h2>Add a Burger</h2>

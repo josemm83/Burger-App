@@ -9,13 +9,13 @@
       <h2>Burgers ready to be devoured!</h2>
       <ul>
         {{#each burgers}}
-          {{#unless this.devoured}}
-            <form action="burgers/{{id}}">
+          {{#unless devoured}}
+            <form action="burgers/eat/{{id}}">
               <div class="input-group">
                 <li class="form-control">{{id}}. {{burger_name}}</li>
-                  <span class="input-group-btn">
-                    <button class="btn btn-success devour-button" type="submit">Devour It!</button>
-                  </span>
+                <span class="input-group-btn">
+                  <button class="btn btn-success devour-button" type="submit">Devour It!</button>
+                </span>
               </div>
             </form>
           {{/unless}}
@@ -27,12 +27,10 @@
       <h2>Burgers that have been eaten!</h2>
       <ul>
       {{#each burgers}}
-          {{#if this.devoured}}
-            <form action="burgers/{{id}}">
+          {{#if this.devoured}}     
               <div class="input-group">
-                <li class="form-control">{{id}}. {{burger_name}}</li>
+                <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
               </div>
-            </form>
           {{/if}}
         {{/each}}
       </ul>

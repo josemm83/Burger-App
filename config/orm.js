@@ -42,7 +42,7 @@ var orm ={
         queryString += ") ";
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
-        queryString += ") ";
+        queryString += ");";
     
         console.log(queryString);
     
@@ -61,6 +61,7 @@ var orm ={
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
+        queryString += ";";
     
         console.log(queryString);
         connection.query(queryString, function(err, result) {
@@ -72,5 +73,5 @@ var orm ={
         });
     }
 };
-// console.log("orm connected");
+
 module.exports = orm;

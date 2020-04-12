@@ -42,7 +42,7 @@ var orm ={
         queryString += ") ";
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
-        queryString += ");";
+        queryString += ") ";
     
         console.log(queryString);
     

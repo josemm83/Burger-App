@@ -1,6 +1,5 @@
 .add {
   text-align: center;
-  color: white;
 }
 
 .jumbotron {
@@ -21,4 +20,19 @@ body {
 
 .btn:hover {
   background-color: teal;
+}
+
+@media screen and (max-width: 800px){
+  body {
+    background-image: url("../img/burger2.jfif");
+  }
+
+  .jumbotron {
+    background-image: url("../img/burger_back2.jfif");
+    color: #fff;
+  }
+
+  .eatburger{
+    background-color: green;
+  }
 }
